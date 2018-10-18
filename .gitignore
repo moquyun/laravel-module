@@ -1,4 +1,4 @@
  #忽略
  .gitignore
 .idea/
-ccc/
+.DS_Store
