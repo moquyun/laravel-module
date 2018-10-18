@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc697aae-d536-49fa-b473-0f6e73d10b59" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Commands/BuildCreateCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/BuildCreateCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/ConfigCreateCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/ConfigCreateCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/ModelCreateCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/ModelCreateCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/ModuleCreateCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/ModuleCreateCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/PermissionCreateCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/PermissionCreateCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/menus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/menus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/permission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,26 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-86">
-                <caret line="272" column="14" selection-start-line="272" selection-start-column="14" selection-end-line="272" selection-end-column="14" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuildCreateCommand.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Commands/BuildCreateCommand.php">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="211" column="1" lean-forward="true" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
-              <folding>
-                <element signature="e#42#71#0#PHP" expanded="true" />
-              </folding>
+            <state>
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -98,6 +78,7 @@
         <option value="$PROJECT_DIR$/src/Commands/ModelCreateCommand.php" />
         <option value="$PROJECT_DIR$/src/Commands/ConfigCreateCommand.php" />
         <option value="$PROJECT_DIR$/src/Commands/BuildCreateCommand.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -142,12 +123,6 @@
               <item name="laravel-module" type="b2602c69:ProjectViewProjectNode" />
               <item name="laravel-module" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="laravel-module" type="b2602c69:ProjectViewProjectNode" />
-              <item name="laravel-module" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Commands" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="laravel-module" type="b2602c69:ProjectViewProjectNode" />
@@ -202,12 +177,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539830945170</updated>
-      <workItem from="1539830946695" duration="2806000" />
+      <workItem from="1539830946695" duration="3384000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2806000" />
+    <option name="totallyTimeSpent" value="3384000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="190" y="31" width="1514" height="966" extended-state="0" />
@@ -370,13 +345,6 @@
     <entry file="file://$PROJECT_DIR$/src/copys/gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/copys/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-150" />
@@ -436,6 +404,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Commands/BuildCreateCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="211" column="1" lean-forward="true" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
+          <folding>
+            <element signature="e#42#71#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Commands/models/model.tpl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Commands/models/migration.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-199" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Commands/build/request.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-94" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Commands/build/controller.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-955" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Commands/build/views/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Commands/build/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-962" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Commands/build/views/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Commands/build/views/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/ExampleComponent.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-73" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-430" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/components/ExampleComponent.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -446,13 +472,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Commands/BuildCreateCommand.php">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="211" column="1" lean-forward="true" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
-          <folding>
-            <element signature="e#42#71#0#PHP" expanded="true" />
-          </folding>
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
