@@ -2,7 +2,6 @@
 
 通过使用模块来管理大型Laravel项目，模块就像一个laravel包非常方便的进行添加或移除。
 
-这个包已经在 [HDCMS](http://www.hdcms.com) 中使用。
 
 模块是在 [nwidart.com/laravel-modules](https://nwidart.com/laravel-modules/v3/advanced-tools/artisan-commands) 和  [laravel-permission](https://github.com/spatie/laravel-permission#installation)  组件基础上扩展了一些功能，所以需要先安装这两个组件。
 
@@ -10,7 +9,7 @@
 
 ## 安装组件
 
-    composer require houdunwang/laravel-module
+    composer require moquyun/laravel-module
     
     php artisan vendor:publish --provider="Nwidart\Modules\LaravelModulesServiceProvider"
     
@@ -18,7 +17,7 @@
     
     php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" --tag="config"
     
-    php artisan vendor:publish --provider="Houdunwang\Module\LaravelServiceProvider"
+    php artisan vendor:publish --provider="moquyun\Module\LaravelServiceProvider"
     
     php artisan migrate
 
@@ -38,7 +37,7 @@
 下面的命令是安装 `Admin` 模块
 
 ```
-php artisan hd:module Admin
+php artisan mq:module Admin
 ```
 创建模块会同时执行以下操作：
 
@@ -50,7 +49,7 @@ php artisan hd:module Admin
 新建模块时系统会自动创建配置，一般情况下不需要执行以下命令生成配置文件（除组件添加新配置功能外）
 
 ```
-php artisan hd:config Admin
+php artisan mq:config Admin
 ```
 
 **文件说明**
@@ -80,14 +79,14 @@ function saveConfig(array $data = [], $name = 'config')
 
 系统会根据模块配置文件 `menus.php` 生成后台菜单项
 
-当 menus.php 文件不存在时，执行 `php artisan hd:config Admin` 系统会为模块 Admin 创建菜单。
+当 menus.php 文件不存在时，执行 `php artisan mq:config Admin` 系统会为模块 Admin 创建菜单。
 
 **获取菜单**
 
 获取系统可使用的所有菜单，以集合形式返回数据。可用于后台显示菜单列表。
 
 ```
-\HDModule::getMenus()
+\MQModule::getMenus()
 ```
 
 ## 权限管理
@@ -99,13 +98,13 @@ function saveConfig(array $data = [], $name = 'config')
 系统根据 `Admin` 模块配置文件 `permission.php` 重新生成权限，执行以下命令会创建权限配置文件。
 
 ```
-php artisan hd:permission Admin
+php artisan mq:permission Admin
 ```
 
 不指定模块时生成所有模块的权限表
 
 ```
-php artisan hd:permission
+php artisan mq:permission
 ```
 
 > 文件存在时不会覆盖
@@ -130,14 +129,14 @@ name 指用于验证时的 `权限标识` ，可以使用任何字符定义。�
 根据 `guard` 获取权限数据，可用于后台配置设置表单。
 
 ```
-\HDModule::getPermissionByGuard('admin');
+\MQModule::getPermissionByGuard('admin');
 ```
 
 ### 中间件
 
- [laravel-permission](https://github.com/spatie/laravel-permission#using-a-middleware) 组件提供了中间件功能，但处理不够灵活并对资源控制器支持不好。所以`houdunwang/laravel-module` 组件提供了中间件的功能扩展，你也可以使用  [laravel-permission](https://github.com/spatie/laravel-permission#installation)  中间件的所有功能。
+ [laravel-permission](https://github.com/spatie/laravel-permission#using-a-middleware) 组件提供了中间件功能，但处理不够灵活并对资源控制器支持不好。所以`moquyun/laravel-module` 组件提供了中间件的功能扩展，你也可以使用  [laravel-permission](https://github.com/spatie/laravel-permission#installation)  中间件的所有功能。
 
-以下都是对 `houdunwang/laravel-module`扩展中间件的说明，[laravel-permission](https://github.com/spatie/laravel-permission#using-a-middleware) 中间件使用请查看组件手册。
+以下都是对 `moquyun/laravel-module`扩展中间件的说明，[laravel-permission](https://github.com/spatie/laravel-permission#using-a-middleware) 中间件使用请查看组件手册。
 
 使用中间件路由需要模块 `permission.php` 配置文件中的权限标识为 `控制器@方法`形式。
 
@@ -148,14 +147,14 @@ name 指用于验证时的 `权限标识` ，可以使用任何字符定义。�
 ```
 protected $routeMiddleware = [
 	...
-	'permission'    => \Houdunwang\Module\Middlewares\PermissionMiddleware::class,
+	'permission'    => \Moquyun\Module\Middlewares\PermissionMiddleware::class,
 	...
 ];
 ```
 
 ### 站长特权
 
-配置文件 `config/hd_module.php` 文件中定义站长使用的角色。
+配置文件 `config/mq_module.php` 文件中定义站长使用的角色。
 
 ```
 'webmaster' => 'webmaster'
@@ -228,36 +227,36 @@ Route::resource('role', 'RoleController')->middleware("permission:admin,resource
 
 ```
 #$module 模块标识
-\HDModule::module($module = null)
+\MQModule::module($module = null)
 ```
 
 获取当前请求使用的模块名
 
 ```
-\HDModule::currentModule()
+\MQModule::currentModule()
 ```
 
 获取模块菜单，参数为模块标识，不传参数时获取当前模块菜单
 ```
-\HDModule::getMenuByModule('Admin')
+\MQModule::getMenuByModule('Admin')
 ```
 验证权限如果用户是站长直接放行
 
 ```
-\HDModule::hadPermission()
+\MQModule::hadPermission()
 ```
 
 获取模块列表，参数为不需要返回的模块，不传参数获取所有模块
 
 ```
-\HDModule::getModulesLists(['Admin','Article'])
+\MQModule::getModulesLists(['Admin','Article'])
 ```
 
 获取模块路径
 
 ```
 #$module——模块标识
-\HDModule::getModulePath($module = null);
+\MQModule::getModulePath($module = null);
 ```
 
 ## 自动化构建
@@ -271,7 +270,7 @@ Route::resource('role', 'RoleController')->middleware("permission:admin,resource
 执行以下命令系统会为 Article 模块创建 Category模型和对应的数据迁移文件。
 
 ```
-php artisan hd:model Category Article
+php artisan mq:model Category Article
 ```
 
 ### 执行自动化构建
