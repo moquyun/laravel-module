@@ -1,17 +1,17 @@
 <?php
 
-namespace Houdunwang\Module\Middlewares;
+namespace Moquyun\Module\Middlewares;
 
 use Closure;
-use Houdunwang\Module\Exceptions\PermissionDenyException;
-use Houdunwang\Module\Traits\PermissionService;
+use Moquyun\Module\Exceptions\PermissionDenyException;
+use Moquyun\Module\Traits\PermissionService;
 use Route;
 use DB;
 
 /**
  * Class PermissionMiddleware
  *
- * @package Houdunwang\Module\Middlewares
+ * @package Moquyun\Module\Middlewares
  */
 class PermissionMiddleware
 {
@@ -23,7 +23,7 @@ class PermissionMiddleware
      * @param string   $permission
      *
      * @return mixed
-     * @throws \Houdunwang\Module\Exceptions\PermissionDenyException
+     * @throws \Moquyun\Module\Exceptions\PermissionDenyException
      */
     public function handle($request, Closure $next, string $guard = 'admin', $resource = null)
     {

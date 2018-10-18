@@ -1,24 +1,19 @@
 <?php
-/** .-------------------------------------------------------------------
- * |      Site: www.hdcms.com
- * |      Date: 2018/6/25 下午2:54
- * |    Author: 向军大叔 <2300071698@qq.com>
- * '-------------------------------------------------------------------*/
 
-namespace Houdunwang\Module;
+namespace Moquyun\Module;
 
-use Houdunwang\Module\Commands\BuildCreateCommand;
-use Houdunwang\Module\Commands\ModelCreateCommand;
-use Houdunwang\Module\Commands\PermissionCreateCommand;
-use Houdunwang\Module\Services\MenusService;
+use Moquyun\Module\Commands\BuildCreateCommand;
+use Moquyun\Module\Commands\ModelCreateCommand;
+use Moquyun\Module\Commands\PermissionCreateCommand;
+use Moquyun\Module\Services\MenusService;
 use Illuminate\Support\ServiceProvider;
-use Houdunwang\Module\Commands\ModuleCreateCommand;
-use Houdunwang\Module\Commands\ConfigCreateCommand;
+use Moquyun\Module\Commands\ModuleCreateCommand;
+use Moquyun\Module\Commands\ConfigCreateCommand;
 
 class LaravelServiceProvider extends ServiceProvider
 {
     public $singletons = [
-        'hd-menu' => MenusService::class,
+        'mq-menu' => MenusService::class,
     ];
 
     /**
@@ -42,7 +37,7 @@ class LaravelServiceProvider extends ServiceProvider
 
         //配置文件
         $this->publishes([
-            __DIR__.'/hd_module.php' => config_path('hd_module.php'),
+            __DIR__.'/mq_module.php' => config_path('mq_module.php'),
         ]);
     }
 
@@ -53,7 +48,7 @@ class LaravelServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('HDModule', function () {
+        $this->app->singleton('MQModule', function () {
             return new Provider();
         });
     }

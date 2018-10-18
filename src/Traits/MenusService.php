@@ -1,10 +1,5 @@
 <?php
-/** .-------------------------------------------------------------------
- * |      Site: www.hdcms.com  www.houdunren.com
- * |      Date: 2018/7/2 下午2:21
- * |    Author: 向军大叔 <2300071698@qq.com>
- * '-------------------------------------------------------------------*/
-namespace Houdunwang\Module\Traits;
+namespace Moquyun\Module\Traits;
 
 trait MenusService
 {
@@ -18,7 +13,7 @@ trait MenusService
         foreach (\Module::getOrdered() as $module) {
             $path          = config('modules.paths.modules')."/{$module->name}/Config";
             $menusConfig   = include "{$path}/menus.php";
-            $title         = \HDModule::config($module->name.'.config.name');
+            $title         = \MQModule::config($module->name.'.config.name');
             $menus[$title] = $menusConfig;
         }
 
@@ -34,7 +29,7 @@ trait MenusService
      */
     public function getMenuByModule($module = null)
     {
-        $module = $module ?? \HDModule::currentModule();
+        $module = $module ?? \MQModule::currentModule();
         $path = config('modules.paths.modules')."/{$module}/Config";
 
         return include "{$path}/menus.php";

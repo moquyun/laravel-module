@@ -1,21 +1,16 @@
 <?php
-/** .-------------------------------------------------------------------
- * |      Site: www.hdcms.com
- * |      Date: 2018/6/25 下午3:13
- * |    Author: 向军大叔 <2300071698@qq.com>
- * '-------------------------------------------------------------------*/
 
-namespace Houdunwang\Module;
+namespace Moquyun\Module;
 
-use Houdunwang\Module\Traits\ConfigService;
-use Houdunwang\Module\Traits\MenusService;
-use Houdunwang\Module\Traits\ModuleService;
-use Houdunwang\Module\Traits\PermissionService;
+use Moquyun\Module\Traits\ConfigService;
+use Moquyun\Module\Traits\MenusService;
+use Moquyun\Module\Traits\ModuleService;
+use Moquyun\Module\Traits\PermissionService;
 
 /**
  * Class Facade
  *
- * @package Houdunwang\Module
+ * @package Moquyun\Module
  */
 class Provider
 {

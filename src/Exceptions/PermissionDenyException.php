@@ -1,11 +1,6 @@
 <?php
-/** .-------------------------------------------------------------------
- * |      Site: www.hdcms.com  www.houdunren.com
- * |      Date: 2018/7/7 下午3:51
- * |    Author: 向军大叔 <2300071698@qq.com>
- * '-------------------------------------------------------------------*/
 
-namespace Houdunwang\Module\Exceptions;
+namespace Moquyun\Module\Exceptions;
 
 use Throwable;
 

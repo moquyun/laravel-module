@@ -1,10 +1,5 @@
 <?php
-/** .-------------------------------------------------------------------
- * |      Site: www.hdcms.com  www.houdunren.com
- * |      Date: 2018/6/30 上午1:54
- * |    Author: 向军大叔 <2300071698@qq.com>
- * '-------------------------------------------------------------------*/
-namespace Houdunwang\Module\Traits;
+namespace Moquyun\Module\Traits;
 
 use Doctrine\DBAL\Configuration;
 use Doctrine\DBAL\DriverManager;

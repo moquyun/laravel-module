@@ -1,16 +1,7 @@
 <?php
+namespace Moquyun\Module\Facade;
 
-namespace Moquyun\Module;
-
-use Moquyun\Module\Services\ConfigService;
-use Illuminate\Support\Facades\Facade;
-
-/**
- * Class Facade
- *
- * @package Moquyun\Module
- */
-class Factory extends Facade
+class MQModuleConfig extends Facade
 {
     /**
      * Get the registered name of the component.

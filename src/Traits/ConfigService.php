@@ -1,17 +1,12 @@
 <?php
-/** .-------------------------------------------------------------------
- * |      Site: www.hdcms.com  www.houdunren.com
- * |      Date: 2018/7/2 下午2:21
- * |    Author: 向军大叔 <2300071698@qq.com>
- * '-------------------------------------------------------------------*/
-namespace Houdunwang\Module\Traits;
+namespace Moquyun\Module\Traits;
 
 use Module;
 use HDModule;
 /**
  * Class ModuleConfig
  *
- * @package Houdunwang\Module\Services
+ * @package Moquyun\Module\Services
  */
 trait ConfigService
 {
@@ -35,9 +30,9 @@ trait ConfigService
 
     public function saveConfig(array $data = [], $name = 'config')
     {
-        $module = HDModule::currentModule();
-        $config = array_merge(HDModule::config($module.'.'.$name), $data);
-        $file   = HDModule::getModulePath().'/Config/'.$name.'.php';
+        $module = MQModule::currentModule();
+        $config = array_merge(MQModule::config($module.'.'.$name), $data);
+        $file   = MQModule::getModulePath().'/Config/'.$name.'.php';
 
         return file_put_contents($file, '<?php return '.var_export($config, true).';');
     }

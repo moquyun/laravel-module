@@ -1,10 +1,5 @@
 <?php
-/** .-------------------------------------------------------------------
- * |      Site: www.hdcms.com  www.houdunren.com
- * |      Date: 2018/7/2 下午2:21
- * |    Author: 向军大叔 <2300071698@qq.com>
- * '-------------------------------------------------------------------*/
-namespace Houdunwang\Module\Traits;
+namespace Moquyun\Module\Traits;
 
 use Module;
 use Spatie\Permission\Models\Permission;
@@ -12,7 +7,7 @@ use Spatie\Permission\Models\Permission;
 /**
  * Trait PermissionService
  *
- * @package Houdunwang\Module\Traits
+ * @package Moquyun\Module\Traits
  */
 trait PermissionService
 {
@@ -50,7 +45,7 @@ trait PermissionService
     public function isWebMaster($guard = 'admin'): bool
     {
         $relation = auth($guard)->user()->roles();
-        $has      = $relation->where('roles.name', config('hd_module.webmaster'))->first();
+        $has      = $relation->where('roles.name', config('mq_module.webmaster'))->first();
 
         return boolval($has);
     }
@@ -83,7 +78,7 @@ trait PermissionService
      */
     protected function filterByGuard($module, $guard)
     {
-        $data = $config = \HDModule::config($module.'.permission');
+        $data = $config = \MQModule::config($module.'.permission');
         foreach ($config as $k => $group) {
             foreach ($group['permissions'] as $n => $permission) {
                 if ($permission['guard'] != $guard) {
