@@ -1,5 +1,5 @@
 <?php
-namespace Houdunwang\Module\Commands;
+namespace Moquyun\Module\Commands;
 
 use Illuminate\Console\Command;
 use Artisan;
@@ -12,7 +12,7 @@ class ModuleCreateCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'hd:module {name}';
+    protected $signature = 'mq:module {name}';
 
     /**
      * The console command description.
@@ -45,7 +45,7 @@ class ModuleCreateCommand extends Command
         $this->call('module:make', [
             'name' => [$name],
         ]);
-        $this->call('hd:config', [
+        $this->call('mq:config', [
             'name' => $name,
         ]);
 

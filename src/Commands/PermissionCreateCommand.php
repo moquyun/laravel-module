@@ -1,5 +1,5 @@
 <?php
-namespace Houdunwang\Module\Commands;
+namespace Moquyun\Module\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
@@ -8,7 +8,7 @@ use Spatie\Permission\Models\Permission;
 /**
  * Class PermissionCreateCommand
  *
- * @package Houdunwang\Module\Commands
+ * @package Moquyun\Module\Commands
  */
 class PermissionCreateCommand extends Command
 {
@@ -17,7 +17,7 @@ class PermissionCreateCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'hd:permission {name?}';
+    protected $signature = 'mq:permission {name?}';
 
     /**
      * The console command description.
@@ -35,7 +35,7 @@ class PermissionCreateCommand extends Command
     {
         app()['cache']->forget('spatie.permission.cache');
         foreach ((array)$this->getModules() as $module) {
-            $config = \HDModule::config($module.'.permission');
+            $config = \MQModule::config($module.'.permission');
             foreach ((array)$config as $group) {
                 foreach ((array)$group['permissions'] as $permission) {
                     if ( ! $this->permissionIsExists($permission)) {

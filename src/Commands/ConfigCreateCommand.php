@@ -1,7 +1,7 @@
 <?php
-namespace Houdunwang\Module\Commands;
+namespace Moquyun\Module\Commands;
 
-use Houdunwang\Module\Traits\BuildVars;
+use Moquyun\Module\Traits\BuildVars;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 
@@ -13,7 +13,7 @@ class ConfigCreateCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'hd:config {name}';
+    protected $signature = 'mq:config {name}';
 
     /**
      * The console command description.

@@ -1,7 +1,7 @@
 <?php
-namespace Houdunwang\Module\Commands;
+namespace Moquyun\Module\Commands;
 
-use Houdunwang\Module\Traits\BuildVars;
+use Moquyun\Module\Traits\BuildVars;
 use Illuminate\Console\Command;
 use Artisan;
 use Storage;
@@ -14,7 +14,7 @@ class ModelCreateCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'hd:model {model} {module}';
+    protected $signature = 'mq:model {model} {module}';
 
     /**
      * The console command description.

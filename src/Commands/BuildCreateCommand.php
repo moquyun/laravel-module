@@ -1,8 +1,8 @@
 <?php
-namespace Houdunwang\Module\Commands;
+namespace Moquyun\Module\Commands;
 
-use Houdunwang\Module\Traits\Db;
-use Houdunwang\Module\Traits\BuildVars;
+use Moquyun\Module\Traits\Db;
+use Moquyun\Module\Traits\BuildVars;
 use Illuminate\Console\Command;
 use Artisan;
 use Storage;
@@ -15,7 +15,7 @@ class BuildCreateCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'hd:build {model} {module} {model_title} {module_title}';
+    protected $signature = 'mq:build {model} {module} {model_title} {module_title}';
 
     /**
      * The console command description.
@@ -49,7 +49,7 @@ class BuildCreateCommand extends Command
         if ($this->check()) {
             $this->setModelInstance();
             $this->setVar('MODEL_TITLE', $this->modelTitle);
-            $this->call('hd:handle', ['model' => $this->model, 'module' => $this->module]);
+            $this->call('mq:handle', ['model' => $this->model, 'module' => $this->module]);
             $this->createController();
             $this->createRequest();
             $this->createRoute();
